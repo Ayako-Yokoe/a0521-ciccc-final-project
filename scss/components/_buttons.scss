@@ -1,0 +1,56 @@
+@mixin button() {
+    background-color: $color-brown_1;
+    color: $color-black_2;
+    font-family: $font-family-primary;
+    font-size: $font-sm;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 5%;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0 3px 2px $color-brown_3; 
+    transition: all 0.5s;
+}
+
+@mixin hover() {
+    background-color: $color-brown_2;
+    color: $color-white;
+    font-weight: 400;
+}
+
+.about-us-btn {
+    @include button(); 
+    margin: 10px 0 20px 0;  
+    
+    &:hover {
+        @include hover;
+    }
+}
+
+.add-to-cart-btn {
+    @include button();
+    padding: 5px;
+    margin-top: 20px 0 10px 0;
+
+    &:hover {
+        @include hover;
+    }
+}
+
+.find-beans-btn {
+    @include button();
+    width: 350px;
+    letter-spacing: 3px;
+    font-size: $font-md;
+    font-weight: 500;
+
+    &:hover {
+        @include hover;
+    }
+}
+
+
+
+
+

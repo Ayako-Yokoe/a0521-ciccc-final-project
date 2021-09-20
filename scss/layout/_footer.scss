@@ -1,0 +1,115 @@
+.footer-container {
+    background-color: $color-black_2;
+    padding: 10px 20px 20px 20px;
+}
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-nav {
+
+    ul {
+        list-style: none;
+    }
+
+    .footer-nav-list {
+        color: $color-white;
+        font-family: $font-family-primary;
+        font-size: $font-xxs;
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+
+        @media (min-width:768px){
+            font-size: $font-xs;
+            letter-spacing: 1px;
+        }
+        @media (min-width:992px){
+            font-size: $font-sm;
+            letter-spacing: 2px;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.social-media {
+    padding: 20px 0;
+
+    &-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+
+    &-link {
+        margin-right: 5px;
+        background-color: transparent;
+        color: lightyellow;
+
+        @media (min-width:768px){
+            margin-right: 10px;
+        }
+        @media (min-width:992px){
+            margin-right: 12px;
+        }
+    }
+}
+
+.sign-up {
+    h3 {
+        @include text-xs;
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+
+        @media (min-width:768px){
+            font-size: $font-sm;
+            letter-spacing: 2px;
+        }
+    }
+
+    input {
+        margin: 5px 0;
+
+        @media (min-width:768px){
+            margin: 8px 0;
+        }
+    }
+
+    #email {
+        font-size: $font-xxs;
+        padding: 3px;
+        height: 20px;
+
+        @media (min-width:768px){   
+            font-size: $font-xs;
+            padding: 5px;
+            height: 25px;
+        }
+    }
+}
+
+#membership-btn {
+    background-color: $color-brown_1;
+    color: $color-black_2;
+    font-family: $font-family-primary;
+    font-size: $font-xs;
+    cursor: pointer;
+    padding: 1px 3px;
+    box-shadow: 0 3px 2px $color-brown_3; 
+    transition: all 0.5s;
+
+    @media (min-width:768px){   
+        font-size: $font-sm;
+        padding: 3px 6px;
+    }
+    
+    &:hover {
+        @include hover;
+    }
+}

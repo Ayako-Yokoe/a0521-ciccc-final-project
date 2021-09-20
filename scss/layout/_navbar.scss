@@ -1,0 +1,109 @@
+.nav-container {
+    position: relative;
+    z-index: 20;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    top: 1%;
+    right: 5%;
+    z-index: 30;
+
+    @media (min-width: 768px){
+        display: none;
+    }
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &-line {
+        width: 100%;
+        height: 4px;
+        background-color: $color-white;
+        transition: all 0.5s 0.5s;
+        transform-origin: right;
+    }
+}
+
+.hamburger-menu-list {
+    width: 100vw;
+    height: 50vh;
+    background-color: $color-black_2;
+    position: fixed;
+    right: -100vw;
+    //right: 0vw;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list {
+    list-style: none;
+    display: none;
+}
+
+.nav-list-link {
+    @include text-sm;
+    text-decoration: none;
+    font-weight: $font-weight;
+    padding: 10px;
+
+    display: block;
+    text-align: center; 
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: lighten($color-black_1, 0.5);
+        letter-spacing: 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &-item {
+        flex: 1 1 auto;
+        text-align: center; 
+    }
+}
+
+#shopping-cart {
+    width: 35px;
+    height: 35px;
+    background-color: $color-brown_1;
+    border-radius: 50%;
+    padding: 2px 4px 2px 1px;
+    align-self: center;
+}
+
+.checkbox:checked ~ .hamburger-menu-list {
+    right: 0;
+}
+.checkbox:checked ~ .hamburger-menu .menu {
+    transform: rotateZ(90deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+    transform: rotateZ(-40deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+    transform: rotateZ(40deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+    opacity: 0;
+}

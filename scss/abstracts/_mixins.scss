@@ -1,0 +1,20 @@
+@mixin text-md {
+    color: $color-white;
+    font-family: $font-family-primary;
+    letter-spacing: 2px;
+    font-size: $font-md;
+}
+
+@mixin text-sm {
+    color: $color-white;
+    font-family: $font-family-primary;
+    letter-spacing: 2px;
+    font-size: $font-sm;
+}
+
+@mixin text-xs {
+    color: $color-white;
+    font-family: $font-family-primary;
+    letter-spacing: 2px;
+    font-size: $font-xs;
+}

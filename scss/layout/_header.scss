@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    background-color: $color-black_2;
+
+    @media (min-width: 768px){
+        height: 55px;
+    }
+
+    @media (min-width: 992px){
+        height: 70px;
+    }
+}

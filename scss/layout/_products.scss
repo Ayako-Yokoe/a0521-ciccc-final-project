@@ -1,0 +1,114 @@
+.products-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/roasting_coffee_beans.jpg");
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    padding: 15px 30px;
+
+    @media (min-width:992px){
+        height: 80vh;
+        padding: 80px 40px;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width:768px){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background-color: $color-black_1;
+    padding: 20px 20px 0 20px;
+    margin: 10px auto;
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width:768px){
+        margin: 15px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    @media (min-width:992px){
+        margin: 20px 40px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    &-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+ 
+        &-heading {
+            @include text-md;
+            font-size: $font-lg;
+            font-weight: $font-weight;
+        }
+        &-img {
+            width: 150px;
+            height: 150px; 
+        }
+    }
+
+    &-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 400px;
+        z-index: 10;
+        transition: top 0.7s ease;
+
+        @media (min-width:992px){
+            height: 400px;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        
+        &-img {
+            width: 120px;
+            height: 120px;
+        }
+
+        h2, p {
+            color: $color-white;
+            font-family: $font-family-primary;
+            font-size: $font-sm;
+            letter-spacing: 2px;
+            padding: 10px 10px 0 10px;
+        }
+    }
+}
+
+.card:hover .card-overlay {
+     top: 0;
+    background-color: $color-black_2;
+}
+
+.add-to-cart-btn {
+    @include button;
+     margin: 10px;
+}
+
+.find-beans {
+    text-align: center;
+    padding: 20px 0;
+
+    &-h2 {
+        @include text-md;
+        font-size: $font-lg;
+        padding-bottom: 15px;
+    }
+}
