@@ -10,6 +10,11 @@
         height: 80vh;
         padding: 80px 40px;
     }
+
+    @media (min-width:1100px){
+        height: 100vh;
+        padding: 60px 150px 40px 150px;
+    }
 }
 
 .card-wrapper {
@@ -20,6 +25,10 @@
     @media (min-width:768px){
         flex-direction: row;
         flex-wrap: wrap;
+
+        @media (min-width:1100px){
+            padding: 100px 100px 40px 100px;
+        }
     }
 }
 

@@ -470,6 +470,10 @@ header {
     .products-container {
       height: 80vh;
       padding: 80px 40px; } }
+  @media (min-width: 1100px) {
+    .products-container {
+      height: 100vh;
+      padding: 60px 150px 40px 150px; } }
 
 .card-wrapper {
   display: flex;
@@ -479,6 +483,9 @@ header {
     .card-wrapper {
       flex-direction: row;
       flex-wrap: wrap; } }
+  @media (min-width: 768px) and (min-width: 1100px) {
+    .card-wrapper {
+      padding: 100px 100px 40px 100px; } }
 
 .card {
   width: 300px;
